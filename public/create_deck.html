@@ -26,31 +26,41 @@
 <br>
 <br>
 
-<!--signup fields-->
+<!--create deck fields-->
+
 
 <div id="body" class="row">
-  <form class="col s12">
-    <div class="row">
-      <div id="name_field" class="input-field col s4">
-        <input placeholder="Dolphin Smith" id="first_name" type="text" class="validate">
-        <label for="first_name">Name</label>
+  <div class=row>
+    <form class="col s12">
+      <div class="input-field col s12">
+        <input placeholder="Things about dolphins" id="question" type="text" class="validate">
+        <label for="first_name">NAME YOUR DECK</label>
       </div>
-      <div id="email_field" class="input-field col s4">
-        <input placeholder="dolphinsmith@gmail.com" id="first_name" type="text" class="validate">
-        <label for="last_name">Email</label>
-      </div>
-      <div id="password_field" class="input-field col s4">
-        <input placeholder="*********" id="first_name" type="password" class="validate">
-        <label for="last_name">Password</label>
-      </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input placeholder="Who is the best dolphin" id="question" type="text" class="validate">
+      <label for="first_name">QUESTION</label>
     </div>
+    <div class="input-field col s6">
+      <input placeholder="Flipper" id="answer" type="text" class="validate">
+      <label for="last_name">ANSWER</label>
+    </div>
+  </div>
   </form>
 </div>
 
 <!--signup button-->
+<div class="row">
+  <div class="center">
+    <button class="btn waves-effect waves-light" id="add_new_card" type="submit" name="action">Add another card
+    </button>
+  </div>
+</div>
+
 
 <div class="center">
-  <button class="btn waves-effect waves-light" id="create_user_btn" type="submit" name="action">Create account and start flipping
+  <button class="btn waves-effect waves-light" id="create_deck_btn" type="submit" name="action">Create your deck
   </button>
 </div>
 
@@ -63,11 +73,6 @@
 <hr>
 
 
-<div class="center">
-  <h6>Already have an account?
-    <a href="login.html">LOGIN</a>
-  </h6>
-</div>
 
 
 
