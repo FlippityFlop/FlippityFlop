@@ -29,16 +29,24 @@ $(document).ready(function() {
     console.log("this is the questions: " + question);
     var answer = $("#answer_field_0").val();
     console.log("this is the answer: " + answer);
-    var newQA = {
+    var deck_name = $("#deck_name_field").val();
+    var newCard = {
       question: question,
       answer: answer
     };
-    postQA(newQA);
+    var newDeck = {
+      deck_name: deck_name
+    };
+    postCard(newCard);
+    postDeck(newDeck);
   });
 
   // A function for creating an author. Calls getAuthors upon completion
-  function postQA(postData) {
+  function postCard(postData) {
     $.post("/api/cards", postData);
+  }
+  function postDeck(postData) {
+    $.post("/api/decks", postData);
   }
 });
 

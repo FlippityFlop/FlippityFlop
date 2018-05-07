@@ -30,10 +30,19 @@ module.exports = function(app) {
     console.log(req.body.name);
     console.log(req.body.question);
     db.Card.create({
-      name: req.body.name,
+      answer: req.body.answer,
       question: req.body.question
     }).then(function(dbCard) {
       res.json(dbCard);
+    });
+
+    app.post("/api/decks", function(req, res) {
+      console.log(req.body.deck_name);
+      db.Deck.create({
+        deck_name: req.body.deck_name
+      }).then(function(dbDeck) {
+        res.json(dbDeck);
+      });
     });
   });
 
