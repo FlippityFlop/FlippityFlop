@@ -6,12 +6,16 @@ $(document).ready(function() {
       '<div class="input-field col s6">' +
         '<input placeholder="Next Question" id= "question_field_' +
         cardCount +
+        '" name = "answer_field_' +
+        cardCount +
         '" class="validate" type="text">' +
         "</div>" +
         '<div class= "input-field col s6">' +
-        '<input placeholder="Next Answer" id= "answer_field_' +
+        '<input placeholder="Next Answer" name = "answer_field_' +
         cardCount +
-        '" class="validate" type="text">' +
+        '" id= "answer_field_' +
+        cardCount +
+        '" class="validate " type="text">' +
         "</div>" +
         "</div>"
     );
@@ -19,7 +23,36 @@ $(document).ready(function() {
     $(".newCardInput").append(newCardRow);
     cardCount++;
   });
+
+  $("#create_deck_btn").on("click", function(event) {
+    var question = $("#question_field_0").val();
+    console.log("this is the questions: " + question);
+    var answer = $("#answer_field_0").val();
+    console.log("this is the answer: " + answer);
+    var newQA = {
+      question: question,
+      answer: answer
+    };
+    postQA(newQA);
+  });
+
+  // A function for creating an author. Calls getAuthors upon completion
+  function postQA(postData) {
+    $.post("/api/cards", postData);
+  }
 });
+
+//   $("#create_deck_btn").on("click", function(event) {
+//     console.log(cardCount);
+//     for (i = 0; i < cardCount; i++) {
+//       var num = [i];
+//       var field = "answer_field_" + num;
+//       console.log("this is field: " + field);
+//       var answer = .val(); $('[name="' + field + '"]').val();
+//       console.log("this is answer: " + answer);
+//     }
+//   });
+// });
 
 // $(document).ready(function() {
 //   // Getting references to the name input and author container, as well as the table body
