@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var cardCount = 1;
+  var cardCount = 3;
 
   $("#add_new_card").on("click", function(event) {
     var newCardRow = $(
@@ -25,29 +25,48 @@ $(document).ready(function() {
   });
 
   $("#create_deck_btn").on("click", function(event) {
-    var question = $("#question_field_0").val();
-    console.log("this is the questions: " + question);
-    var answer = $("#answer_field_0").val();
-    console.log("this is the answer: " + answer);
     var deck_name = $("#deck_name_field").val();
-    var newCard = {
-      question: question,
-      answer: answer
-    };
-    var newDeck = {
-      deck_name: deck_name
-    };
-    postCard(newCard);
-    postDeck(newDeck);
+    var newDeck = { deck_name: deck_name };
+    $.ajax({
+      url: "/api/decks",
+      method: "POST",
+      data: newDeck
+    }).then(function(deck) {
+      var deckId = deck.id;
+      for (i = 0; i < cardCount; i++) {
+        var question = $("#question_field_" + i).val();
+        console.log("this is the questions: " + question);
+        var answer = $("#answer_field_" + i).val();
+        console.log("this is the answer: " + answer);
+
+        var newCard = {
+          question: question,
+          answer: answer,
+          deck_ID: deckId
+        };
+
+        postCard(newCard);
+      }
+    });
   });
 
   // A function for creating an author. Calls getAuthors upon completion
   function postCard(postData) {
-    $.post("/api/cards", postData);
+    $.ajax({
+      url: "/api/cards",
+      method: "POST",
+      data: postData
+    });
   }
-  function postDeck(postData) {
-    $.post("/api/decks", postData);
-  }
+  // function postDeck(postData) {
+  //   $.ajax(
+  //     {
+  //       url: "/api/decks",
+  //       method: "POST"
+  //     },
+  //     postData
+  //   );
+  // }
 });
 
 //   $("#create_deck_btn").on("click", function(event) {
