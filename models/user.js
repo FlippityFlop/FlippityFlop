@@ -1,18 +1,26 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
-    // Giving the Author model a name of type STRING
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
+    displayName: {
+      type: DataTypes.STRING,
+      defaultValue: null
+    },
+    email: {
+      type: DataTypes.STRING,
+      defaultValue: null
+    },
+    password: {
+      type: DataTypes.STRING,
+      defaultValue: null
+    }
   });
 
-  // Author.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Author.hasMany(models.Post, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  User.associate = function(models) {
+    // Associating User with Decks
+    // When a User is deleted, also delete any associated Decks
+    User.hasMany(models.Deck, {
+      onDelete: "cascade"
+    });
+  };
 
   return User;
 };
