@@ -18,10 +18,26 @@
   <![endif]-->
 </head>
 
-<div class="containter">
-  <!--logo-->
-  <img src="images/flippityflop.png" id="logohome" class="center" alt="dolphin with flip flops">
-</div>
+<!--navbar with logo and button and logout-->
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">
+      <img src="images/dolphin_white.png" id="logonav" class="center" alt="dolphin with flip flops">
+    </a>
+    <!--create deck fields
+    <ul class="center">
+      <li>
+        <a class="waves-effect waves-light btn"></a>
+      </li>
+    </ul>-->
+
+    <ul id="nav-mobile" class="right">
+      <li>
+        <a id="logout" href="collapsible.html">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <br>
 <br>
 <br>
@@ -29,40 +45,67 @@
 <!--create deck fields-->
 
 
-<div id="body" class="row">
-  <div class=row>
-    <form class="col s12">
+<div id="question_body" class="row">
+  <form class="col s12">
+
+    <div class=row>
       <div class="input-field col s12">
         <input placeholder="Things about dolphins" id="deck_name_field" type="text" class="validate">
         <label for="deck_name_field">NAME YOUR DECK</label>
       </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s6">
-      <input placeholder="Who is the best dolphin" id="question_field" type="text" class="validate">
-      <label for="question_field">QUESTION</label>
     </div>
-    <div class="input-field col s6">
-      <input placeholder="Flipper" id="answer_field" type="text" class="validate">
-      <label for="answer_field">ANSWER</label>
+    <br>
+    <br>
+    <br>
+
+    <!--q&a-->
+    <div class="row">
+      <div class="input-field col s12 col m6">
+        <input placeholder="Who is the best dolphin" id="question_field_1" type="text" class="validate">
+        <label for="question_field_1">QUESTION 1</label>
+      </div>
+      <div class="input-field col s12 col m6">
+        <input placeholder="Flipper" id="answer_field_1" type="text" class="validate">
+        <label for="answer_field_1">ANSWER 1</label>
+      </div>
     </div>
-  </div>
+    <!--q&a-->
+    <div class="row">
+      <div class="input-field col s12 col m6">
+        <input placeholder="Who is the best dolphin" id="question_field_2" type="text" class="validate">
+        <label for="question_field_2">QUESTION 2</label>
+      </div>
+      <div class="input-field col s12 col m6">
+        <input placeholder="Flipper" id="answer_field_2" type="text" class="validate">
+        <label for="answer_field_2">ANSWER 2</label>
+      </div>
+    </div>
+    <!--q&a-->
+    <div class="row">
+      <div class="input-field col s12 col m6">
+        <input placeholder="Who is the best dolphin" id="question_field_3" type="text" class="validate">
+        <label for="question_field_3">QUESTION 3</label>
+      </div>
+      <div class="input-field col s12 col m6">
+        <input placeholder="Flipper" id="answer_field_3" type="text" class="validate">
+        <label for="answer_field_3">ANSWER 3</label>
+      </div>
+    </div>
   </form>
 </div>
 
 <!--signup button-->
 <div class="row">
   <div class="center">
-    <button class="btn waves-effect waves-light" id="add_new_card" type="submit" name="action">Add another card
+    <button class="btn waves-effect btn-large waves-light" id="add_new_card" type="submit" name="action">Add another card
+    </button>
+    &nbsp;&nbsp;
+    <button class="btn waves-effect btn-large blue" id="create_deck_btn" type="submit" name="action">Create your deck
     </button>
   </div>
 </div>
 
 
-<div class="center">
-  <button class="btn waves-effect waves-light" id="create_deck_btn" type="submit" name="action">Create your deck
-  </button>
-</div>
 
 <!--login text and link-->
 <br>
