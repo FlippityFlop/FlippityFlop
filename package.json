@@ -2,7 +2,7 @@
   "name": "flippityflop",
   "version": "1.0.0",
   "description": "Flash Card App",
-  "main": "flippityFlop.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
