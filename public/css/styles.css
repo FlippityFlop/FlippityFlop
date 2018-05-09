@@ -1,49 +1,128 @@
-#logohome {
+body {
+  background-color: #dff1f5;
+}
 
-    width: 333px;
-    height: auto;
-    margin: auto;
-    text-align: center;
+#logohome {
+  width: 433px;
+  height: auto;
+  margin: auto;
+  text-align: center;
 }
 
 #logonav {
-    width: 200px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    margin-top: -16px;
+  width: 200px;
+  margin-top: -23px;
+  margin-left: -10px;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-large {
+  border-radius: 30px;
 }
 
 #body {
-    max-width: 800px;   
+  max-width: 800px;
 }
 
 #question_body {
-    max-width: 80%; 
+  max-width: 90%;
 }
 
-.nav-wrapper{
-    background-color: #114c5a;
+.card_title {
+  font-size: 22px;
 }
 
+.nav-wrapper {
+  background-color: #114c5a;
+}
 
 #nav-mobile {
-    background-color: #114c5a;
+  background-color: #114c5a;
 }
 
 #buttonCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-footer {
+  position: fixed;
+  padding-top: 10px;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  height: 42px;
+  background: orange;
+  text-align: center;
+  z-index: 9;
+}
+#deck_bg {
+  max-width: 100%;
+}
+
+.btn {
+  border-radius: 30px;
+}
+
+.centered {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  line-height: 1.2em;
+}
+
+.centered_bottom {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.image_container {
+  position: relative;
+  text-align: center;
+  color: #154c59;
+}
+
+.logo_icon {
+  display: none;
+  max-width: 80px;
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo_full {
+    display: none;
+  }
+
+  .logo_icon {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+  }
 }
 
 /* card css 
+
 
 .card {
     max-width: 600px;
@@ -54,4 +133,3 @@
     max-width: 600px;
     max-height: 300px;
 }*/
-
