@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
@@ -16,3 +17,25 @@ connection.connect(function(err) {
 });
 
 module.exports = connection;
+=======
+// *********************************************************************************
+// CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
+// *********************************************************************************
+
+// Dependencies
+var Sequelize = require("sequelize");
+
+// Creates mySQL connection using Sequelize
+var sequelize = new Sequelize("sequelize_library", "root", "password", {
+  host: "localhost",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
+});
+
+// Exports the connection for other files to use
+module.exports = sequelize;
+>>>>>>> 3c400904662923d57a182a7ae4ef7290829624c7
