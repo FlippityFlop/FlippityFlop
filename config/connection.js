@@ -1,11 +1,14 @@
-<<<<<<< HEAD
 var mysql = require("mysql");
+var connection;
 
-var connection = mysql.createConnection({
- host: "localhost",
- user: "root",
- password: "",
- database: ""
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "flipdb"
 });
 
 connection.connect(function(err) {
@@ -17,7 +20,8 @@ connection.connect(function(err) {
 });
 
 module.exports = connection;
-=======
+
+
 // *********************************************************************************
 // CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
 // *********************************************************************************
@@ -38,4 +42,3 @@ var sequelize = new Sequelize("sequelize_library", "root", "password", {
 
 // Exports the connection for other files to use
 module.exports = sequelize;
->>>>>>> 3c400904662923d57a182a7ae4ef7290829624c7
