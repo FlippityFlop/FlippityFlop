@@ -1,9 +1,10 @@
 body {
-  background-color: #dff1f5;
+  background-color: #fafafa;
 }
 
 #logohome {
-  width: 433px;
+  width: 80%;
+  max-width: 433px;
   height: auto;
   margin: auto;
   text-align: center;
@@ -26,15 +27,12 @@ body {
 }
 
 #body {
-  max-width: 800px;
+  width: 80%;
+  max-width: 400px;
 }
 
 #question_body {
   max-width: 90%;
-}
-
-.card_title {
-  font-size: 22px;
 }
 
 .nav-wrapper {
@@ -51,6 +49,10 @@ body {
   margin-right: auto;
 }
 
+.login_btn {
+  margin-top: -20px;
+}
+
 .site-footer {
   position: fixed;
   padding-top: 10px;
@@ -58,7 +60,7 @@ body {
   width: 100%;
   bottom: 0;
   height: 42px;
-  background: orange;
+  background: #19a895;
   text-align: center;
   z-index: 9;
 }
