@@ -35,14 +35,14 @@ module.exports = function(app) {
     }).then(function(dbCard) {
       res.json(dbCard);
     });
+  });
 
-    app.post("/api/decks", function(req, res) {
-      console.log(req.body.deck_name);
-      db.Deck.create({
-        deck_name: req.body.deck_name
-      }).then(function(dbDeck) {
-        res.json(dbDeck);
-      });
+  app.post("/api/decks", function(req, res) {
+    console.log(req.body.deck_name);
+    db.Deck.create({
+      deck_name: req.body.deck_name
+    }).then(function(dbDeck) {
+      res.json(dbDeck);
     });
   });
 
