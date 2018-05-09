@@ -1,4 +1,4 @@
--- Drops the blogger if it exists currently --
+-- Drops the flipper if it exists currently --
 DROP DATABASE IF EXISTS flipdb;
--- Creates the "blogger" database --
+-- Creates the "flipper" database --
 CREATE DATABASE flipdb;
