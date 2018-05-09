@@ -32,17 +32,18 @@ $(document).ready(function() {
       method: "POST",
       data: newDeck
     }).then(function(deck) {
-      var deckId = deck.id;
+      console.log("deck.id is" + deck.id);
+      var deck_ID = deck.id;
       for (i = 0; i < cardCount; i++) {
         var question = $("#question_field_" + i).val();
         console.log("this is the questions: " + question);
         var answer = $("#answer_field_" + i).val();
         console.log("this is the answer: " + answer);
-
+        console.log("this si deck_ID:" + deck_ID);
         var newCard = {
           question: question,
           answer: answer,
-          deck_ID: deckId
+          DeckId: deck_ID
         };
 
         postCard(newCard);
@@ -52,6 +53,7 @@ $(document).ready(function() {
 
   // A function for creating an author. Calls getAuthors upon completion
   function postCard(postData) {
+    console.log(postData);
     $.ajax({
       url: "/api/cards",
       method: "POST",

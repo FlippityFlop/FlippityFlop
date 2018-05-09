@@ -14,13 +14,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // Author.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Author.hasMany(models.Post, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  Deck.associate = function(models) {
+    Deck.hasMany(models.Card, {
+      onDelete: "cascade"
+    });
+  };
 
   return Deck;
 };
