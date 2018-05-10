@@ -175,10 +175,16 @@ h5 {
 
 .card .card-content {
   padding: 120 24 120 44;
+  height: 350px;
 }
 
 .card-back {
   background-color: #114c5a;
+  height: 350px;
+}
+
+.card {
+  height: 370px;
 }
 
 @media only screen and (max-width: 992px) {
