@@ -2,6 +2,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <title>Flippity Flop</title>
   <meta name="andyheymann" content="SitePoint">
@@ -10,7 +12,7 @@
 
   <!-- MAATERIALIZE Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
+  <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
   <!--[if lt IE 9]>
@@ -23,15 +25,18 @@
   <!--navbar with logo and button and logout-->
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">
-        <img src="images/dolphin_white.png" id="logonav" class="center" alt="dolphin with flip flops">
+      <a href="index.html">
+        <img src="images/dolphin_white.png" id="logonav" class="top-left logo_full" alt="dolphin with flip flops">
+        <img src="images/dolphin_icon.png" id="logonav" class="top-left logo_icon" alt="dolphin with flip flops">
+      </a>
+      <a class="waves-effect pink lighten-1 btn centered_header" href="create_deck.html" id="create_deck">Create A Deck
       </a>
       <!--create deck fields
-      <ul class="center">
-        <li>
-          <a class="waves-effect waves-light btn"></a>
-        </li>
-      </ul>-->
+        <ul class="center">
+          <li>
+            <a class="waves-effect waves-light btn"></a>
+          </li>
+        </ul>-->
 
       <ul id="nav-mobile" class="right">
         <li>
@@ -40,7 +45,6 @@
       </ul>
     </div>
   </nav>
-  <br>
   <br>
   <br>
 
@@ -55,10 +59,10 @@
 <!--signup button-->
 
 <div class="center">
-  <h4>Ready to start flipping and flopping?</h4>
+  <h4 class="ready">Ready to start flipping and flopping?</h4>
   <br>
 
-  <a class="waves-effect blue btn-large" href="create_deck.html" id="create_deck_btn">Create your first Flippity Flop
+  <a class="waves-effect pink lighten-1 btn-large" href="create_deck.html" id="create_deck_btn">Create your first Flippity Flop
   </a>
 
 </div>
@@ -79,15 +83,12 @@
 <br>
 <br>
 <br>
-<br>
-<hr>
 
 
-<div class="center">
-  <h6>Don't have an account?
-    <a href="flipFlop.html">REGISTER</a>
-  </h6>
-</div>
+
+<footer class="site-footer">
+  Made with hands by Andy, Bob, Clay, Marina and Mo
+</footer>
 
 
 
