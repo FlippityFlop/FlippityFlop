@@ -1,26 +1,15 @@
-module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
-    displayName: {
-      type: DataTypes.STRING,
-      defaultValue: null
-    },
-    email: {
-      type: DataTypes.STRING,
-      defaultValue: null
-    },
-    password: {
-      type: DataTypes.STRING,
-      defaultValue: null
-    }
-  });
+module.exports = function(sequelize, Sequelize) {
 
-  User.associate = function(models) {
-    // Associating User with Decks
-    // When a User is deleted, also delete any associated Decks
-    User.hasMany(models.Deck, {
-      onDelete: "cascade"
-    });
-  };
+  var User = sequelize.define('user', {
+    id: { autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER},
+    username: {type:Sequelize.TEXT},
+    email: { type:Sequelize.STRING, validate: {isEmail:true} },
+    password : {type: Sequelize.STRING,allowNull: false }, 
+    last_login: {type: Sequelize.DATE},
+    status: {type: Sequelize.ENUM('active','inactive'),defaultValue:'active' }
+
+});
 
   return User;
-};
+
+}

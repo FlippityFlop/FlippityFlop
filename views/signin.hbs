@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flippity Flop</title>
+  <meta name="andyheymann" content="SitePoint">
+  <!-- MATERIALIZE Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!-- MAATERIALIZE Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+  <div id="main" role="main" class="center-align">
+
+    <!--header-->
+    <div class="site-header">
+     <img src="images/logo_index.png" id="logohome" alt="dolphin with flip flops">
+    </div>
+
+    <!--signup fields-->
+    <div class="signin-form">
+      <form id="signin" class="signin" name="signin" method="post" action="/signin">
+          <div class="input-field">
+            <input placeholder="dolphinsmith@gmail.com" id="email_field" name="email" type="email" class="validate">
+            <label for="email_field">Email</label>
+          </div>
+          <div class="input-field">
+            <input placeholder="*********" id="password_field" name="password" type="password" class="validate">
+            <label for="password_field">Password</label>
+          </div>
+        <button class="btn waves-effect pink lighten-1 btn-large" id="create_user_btn" type="submit" name="action">Login</button>
+        <h5>Don't have an account? <a href="signup">REGISTER</a></h5>
+      </form>
+    </div>
+
+    <!--footer-->
+    <footer class="site-footer">
+      Made with hands by Andy, Bob, Clay, Marina and Mo
+    </footer>
+  </div>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
