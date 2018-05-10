@@ -1,57 +1,228 @@
-#logohome {
+body {
+  background-color: white;
+}
 
-    width: 333px;
-    height: auto;
-    margin: auto;
-    text-align: center;
+#logohome {
+  width: 80%;
+  max-width: 433px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  margin-top: -14px;
 }
 
 #logonav {
-    width: 200px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    margin-top: -16px;
+  width: 200px;
+  margin-top: -23px;
+  margin-left: -10px;
+}
+
+.containter_index, .site-header {
+  background-color: #114c5a;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-large {
+  border-radius: 30px;
 }
 
 #body {
-    max-width: 800px;   
+  width: 80%;
+  max-width: 400px;
 }
 
 #question_body {
-    max-width: 80%; 
+  max-width: 90%;
 }
 
-.nav-wrapper{
-    background-color: #114c5a;
+.btn-large {
+  border-radius: 30px;
+  margin-top:50px;
 }
 
+.signup-form, .signin-form {
+  position: relative;
+  margin-top:15vh;
+}
+
+.signup, .signin {
+  position: absolute;
+  margin:auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 80%;
+  max-width: 400px;
+}
+
+h5 {
+  font-size:16px;
+  margin-top:20px;
+}
+
+.nav-wrapper {
+  background-color: #114c5a;
+}
 
 #nav-mobile {
-    background-color: #114c5a;
+  background-color: #114c5a;
 }
 
 #buttonCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ready {
+  font-family: "Passion One", cursive;
+  color: #114c5a;
+  font-size: 38px;
+  font-weight: 100;
+}
+
+.container_deckname {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: #f8f8f8;
+  z-index: 0;
+  border-bottom: 2px dotted #f06292;
+}
+
+.login_btn {
+  margin-top: -20px;
+}
+
+.site-footer {
+  position: fixed;
+  padding-top: 10px;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  height: 38px;
+  background: #19a895;
+  text-align: center;
+  z-index: 9;
+  font-size: 12px;
+}
+#deck_bg {
+  max-width: 100%;
+}
+
+.btn {
+  border-radius: 30px;
+}
+
+.centered {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  line-height: 1.2em;
+}
+
+.centered_bottom {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.image_container {
+  position: relative;
+  text-align: center;
+  color: #154c59;
+  max-width: 140%;
+}
+
+.logo_icon {
+  display: none;
+  max-width: 80px;
+  padding-top: 10px;
+}
+
+.card_color {
+  color: white;
+}
+
+.card_title {
+  width: 350px;
+}
+
+.card-image {
+  height: 20px;
+}
+
+.card .card-content {
+  padding: 120 24 120 44;
+}
+
+.card-back {
+  background-color: #114c5a;
+}
+
+@media only screen and (max-width: 992px) {
+  .card_title {
+    width: 580px;
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .logo_full {
+    display: none;
+  }
+
+  .logo_icon {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .card_title {
+    width: 380px;
+    font-size: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .card_title {
+    width: 260px;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card_title {
+    width: 260px;
+    font-size: 22px;
+  }
 }
 
 /* card css 
-
 .card {
     max-width: 600px;
     max-height: 300px;
 }
-
 .card-reveal {
     max-width: 600px;
     max-height: 300px;
 }*/
-

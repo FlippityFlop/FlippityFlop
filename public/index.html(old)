@@ -3,6 +3,8 @@
 <head>
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <title>Flippity Flop</title>
   <meta name="andyheymann" content="SitePoint">
@@ -20,13 +22,12 @@
   <![endif]-->
 </head>
 
-<div class="containter">
+<div class="containter_index">
 
   <!--logo-->
-  <img src="images/flippityflop.png" id="logohome" class="center" alt="dolphin with flip flops">
+  <img src="images/logo_index.png" id="logohome" class="center" alt="dolphin with flip flops">
 
 </div>
-<br>
 <br>
 <br>
 
@@ -36,15 +37,15 @@
 
   <form class="col s12">
     <div class="row">
-      <div class="input-field col s4">
+      <div class="input-field">
         <input placeholder="Dolphin Smith" id="name_field" type="text" class="validate">
         <label for="name_field">Name</label>
       </div>
-      <div class="input-field col s4">
+      <div class="input-field">
         <input placeholder="dolphinsmith@gmail.com" id="email_field" type="text" class="validate">
         <label for="email_field">Email</label>
       </div>
-      <div class="input-field col s4">
+      <div class="input-field">
         <input placeholder="*********" id="password_field" type="password" class="validate">
         <label for="password_field">Password</label>
       </div>
@@ -57,7 +58,7 @@
 
 <div class="center">
 
-  <button class="btn waves-effect blue btn-large" id="create_user_btn" type="submit" name="action">Create account and start flipping
+  <button class="btn waves-effect pink lighten-1 btn-large" id="create_user_btn" type="submit" name="action">Create Account
   </button>
 
 </div>
@@ -65,21 +66,39 @@
 <!--login text and link-->
 <br>
 <br>
-<br>
-<br>
-<br>
-<hr>
+
 
 
 <div class="center">
 
-  <h6>Already have an account?
+  <h8>Already have an account?
     <a href="login.html">LOGIN</a>
-  </h6>
+  </h8>
 
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+
+<footer class="site-footer">
+  Made with hands by Andy, Bob, Clay, Marina and Mo
+</footer>
 
 <body>
 

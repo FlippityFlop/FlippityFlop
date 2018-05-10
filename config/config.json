@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "samara4U#123",
-=======
-    "password": "1790Mint",
->>>>>>> 3c400904662923d57a182a7ae4ef7290829624c7
+    "password": "",
     "database": "flipdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -18,10 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
