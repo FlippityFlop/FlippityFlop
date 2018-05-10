@@ -6,14 +6,15 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var passport = require("passport");
+var session = require("express-session");
+var exphbs = require("express-handlebars");
+var env = require('dotenv').load();
 
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 4070;
-
-// Requiring our models for syncing
-var db = require("./models");
 
 // Sets up the Express app to handle data parsing
 
@@ -21,6 +22,19 @@ var db = require("./models");
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
+
+
+// For Passport
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
+//For Handlebars
+app.set('views', './views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
 
 // Static directory
 app.use(express.static("public"));
@@ -30,10 +44,15 @@ app.use(express.static("public"));
 require("./routes/api-routes.js")(app);
 require("./routes/create_deck_routes.js")(app);
 require("./routes/html-routes.js")(app);
+//var db = require("./models");
+var models = require("./models");
+var authRoute = require('./routes/auth.js')(app,passport);
+require('./config/passport/passport.js')(passport, models.user);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+models.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

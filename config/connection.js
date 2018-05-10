@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 var mysql = require("mysql");
 var connection;
 
@@ -22,6 +24,7 @@ connection.connect(function(err) {
 module.exports = connection;
 
 
+>>>>>>> refs/remotes/origin/Marina
 // *********************************************************************************
 // CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
 // *********************************************************************************
