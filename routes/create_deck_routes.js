@@ -31,7 +31,8 @@ module.exports = function(app) {
     console.log(req.body.question);
     db.Card.create({
       answer: req.body.answer,
-      question: req.body.question
+      question: req.body.question,
+      DeckId: req.body.DeckId
     }).then(function(dbCard) {
       res.json(dbCard);
     });

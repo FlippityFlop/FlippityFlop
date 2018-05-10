@@ -25,7 +25,7 @@ function makeCard(title, description, img, link, logo) {
   $(thumbnail).on('error', function (err) {
     this.onerror = null;
     $(this).attr('src', 'assets/images/noImage.jpg');
-  });
+  });``
 
   // Append the proper information to the card
   three.children('.card-image').prepend(thumbnail);

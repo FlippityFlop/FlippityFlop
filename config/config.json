@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "samara4U#123",
+=======
+    "password": "1790Mint",
+>>>>>>> 3c400904662923d57a182a7ae4ef7290829624c7
     "database": "flipdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
