@@ -17,7 +17,7 @@ body {
   margin-left: -10px;
 }
 
-.containter_index {
+.containter_index, .site-header {
   background-color: #114c5a;
 }
 
@@ -38,6 +38,29 @@ body {
 
 #question_body {
   max-width: 90%;
+}
+
+.btn-large {
+  border-radius: 30px;
+  margin-top:50px;
+}
+
+.signup-form, .signin-form {
+  position: relative;
+  margin-top:15vh;
+}
+
+.signup, .signin {
+  position: absolute;
+  margin:auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 80%;
+  max-width: 400px;
+}
+
+h5 {
+  font-size:16px;
+  margin-top:20px;
 }
 
 .nav-wrapper {
@@ -177,6 +200,14 @@ body {
     width: 380px;
     font-size: 30px;
   }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .card_title {
+    width: 260px;
+    font-size: 22px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -187,13 +218,10 @@ body {
 }
 
 /* card css 
-
-
 .card {
     max-width: 600px;
     max-height: 300px;
 }
-
 .card-reveal {
     max-width: 600px;
     max-height: 300px;
