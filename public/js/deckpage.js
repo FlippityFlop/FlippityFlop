@@ -50,19 +50,27 @@ function initializeCards(cards) {
   console.log(" card.length in initalize" + cards.length);
   for (var i = 0; i < cards.length; i++) {
     var newCardRow = $(
-      '<div class="input-field col s6">' +
-        '<input placeholder="Next Question" id= "question_field_' +
-        i +
-        '" name = "answer_field_' +
-        i +
-        '" class="validate" type="text">' +
+      '<div class="col s12 m6">' +
+        '<div class="card">' +
+        '<div class="card-image waves-effect waves-block waves-light">' +
+        '<img class="activator" src="images/card_bg.png">' +
         "</div>" +
-        '<div class= "input-field col s6">' +
-        '<input placeholder="Next Answer" name = "answer_field_' +
-        i +
-        '" id= "answer_field_' +
-        i +
-        '" class="validate " type="text">' +
+        '<div class="card-content card-back">' +
+        '<span class="card-title activator white-text text-darken-4">' +
+        cards[i].question +
+        '<i class="material-icons right">arrow_upward' +
+        "</i>" +
+        "</span>" +
+        "</div>" +
+        '<div class="card-reveal">' +
+        '<span class="card-title grey-text text-darken-4">' +
+        '<i class="material-icons right">arrow_downward' +
+        "</i>" +
+        "</span>" +
+        "<p>" +
+        cards[i].question +
+        "</p>" +
+        "</div>" +
         "</div>" +
         "</div>"
     );
