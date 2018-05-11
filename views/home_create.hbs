@@ -25,11 +25,11 @@
   <!--navbar with logo and button and logout-->
   <nav>
     <div class="nav-wrapper">
-      <a href="index">
+      <a href="index.html">
         <img src="images/dolphin_white.png" id="logonav" class="top-left logo_full" alt="dolphin with flip flops">
         <img src="images/dolphin_icon.png" id="logonav" class="top-left logo_icon" alt="dolphin with flip flops">
       </a>
-      <a class="waves-effect pink lighten-1 btn centered_header" href="create_deck" id="create_deck">Create A Deck
+      <a class="waves-effect pink lighten-1 btn centered_header" href="create_deck.html" id="create_deck">Create A Deck
       </a>
       <!--create deck fields
         <ul class="center">
@@ -40,7 +40,7 @@
 
       <ul id="nav-mobile" class="right">
         <li>
-          <a id="logout" href="signin">Logout</a>
+          <a id="logout" href="collapsible.html">Logout</a>
         </li>
       </ul>
     </div>
@@ -59,10 +59,11 @@
 <!--signup button-->
 
 <div class="center">
+  <h4 class="ready"> Hello {{user.username}}</h4>
   <h4 class="ready">Ready to start flipping and flopping?</h4>
   <br>
 
-  <a class="waves-effect pink lighten-1 btn-large" href="create_deck" id="create_deck_btn">Create your first Flippity Flop
+  <a class="waves-effect pink lighten-1 btn-large" href="create_deck.html" id="create_deck_btn">Create your first deck
   </a>
 
 </div>
