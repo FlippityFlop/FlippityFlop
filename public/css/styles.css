@@ -53,6 +53,10 @@ body {
   margin-top: 12vh;
 }
 
+.space {
+  margin-bottom: 400px;
+}
+
 .signup,
 .signin {
   position: absolute;
