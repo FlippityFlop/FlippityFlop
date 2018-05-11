@@ -68,7 +68,7 @@ function initializeCards(cards) {
         "</i>" +
         "</span>" +
         "<p>" +
-        cards[i].question +
+        cards[i].answer +
         "</p>" +
         "</div>" +
         "</div>" +
