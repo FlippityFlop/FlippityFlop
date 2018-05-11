@@ -46,6 +46,12 @@ body {
   margin-top: 50px;
 }
 
+.signup-form,
+.signin-form {
+  position: relative;
+  margin-top: 12vh;
+}
+
 .signup,
 .signin {
   position: absolute;
