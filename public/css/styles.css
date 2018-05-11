@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  overflow-y: scroll;
 }
 
 #logohome {
@@ -17,7 +18,8 @@ body {
   margin-left: -10px;
 }
 
-.containter_index, .site-header {
+.containter_index,
+.site-header {
   background-color: #114c5a;
 }
 
@@ -42,25 +44,34 @@ body {
 
 .btn-large {
   border-radius: 30px;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
-.signup-form, .signin-form {
+.signup-form,
+.signin-form {
   position: relative;
-  margin-top:15vh;
+  margin-top: 12vh;
 }
 
-.signup, .signin {
+.space {
+  margin-bottom: 400px;
+}
+
+.signup,
+.signin {
   position: absolute;
-  margin:auto;
-  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 80%;
   max-width: 400px;
 }
 
 h5 {
-  font-size:16px;
-  margin-top:20px;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .nav-wrapper {
@@ -142,6 +153,11 @@ h5 {
   transform: translate(-50%, -50%);
 }
 
+.bahten {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
 .top-left {
   position: absolute;
   top: 8px;
@@ -175,10 +191,16 @@ h5 {
 
 .card .card-content {
   padding: 120 24 120 44;
+  height: 350px;
 }
 
 .card-back {
   background-color: #114c5a;
+  height: 350px;
+}
+
+.card {
+  height: 370px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -200,7 +222,6 @@ h5 {
     width: 380px;
     font-size: 30px;
   }
-
 }
 
 @media only screen and (max-width: 500px) {
