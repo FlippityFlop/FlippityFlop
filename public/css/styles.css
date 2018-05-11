@@ -53,10 +53,6 @@ body {
   margin-top: 12vh;
 }
 
-.space {
-  margin-bottom: 400px;
-}
-
 .signup,
 .signin {
   position: absolute;
@@ -72,6 +68,7 @@ body {
 h5 {
   font-size: 16px;
   margin-top: 20px;
+  margin-bottom: 200px;
 }
 
 .nav-wrapper {
