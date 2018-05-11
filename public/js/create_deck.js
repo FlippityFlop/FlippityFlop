@@ -27,6 +27,13 @@ $(document).ready(function() {
   $("#create_deck_btn").on("click", function(event) {
     var deck_name = $("#deck_name_field").val();
     var newDeck = { deck_name: deck_name };
+    console.log("location.hostname " + window.location.hostname);
+    console.log("protocol " + window.location.protocol);
+    console.log("pathname " + window.location.pathname);
+    console.log("href " + window.location.href);
+    var newURL =
+      window.location.protocol + "//" + window.location.host + "/dashboard";
+    window.location = newURL;
     $.ajax({
       url: "/api/decks",
       method: "POST",
