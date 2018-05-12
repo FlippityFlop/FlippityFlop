@@ -39,13 +39,13 @@ $(document).ready(function() {
         displayEmpty(cards);
       } else {
         console.log("you are in deck_page.js line 38");
-        initializeCards(cards);
+        initializeCards(cards, deckId);
       }
     });
   }
 });
 
-function initializeCards(cards) {
+function initializeCards(cards, deckId) {
   console.log("cards in initializeCards" + cards);
   console.log(" card.length in initalize" + cards.length);
   for (var i = 0; i < cards.length; i++) {
@@ -70,6 +70,18 @@ function initializeCards(cards) {
         "<p>" +
         cards[i].answer +
         "</p>" +
+        '<div class="center">' +
+        '<button class="btn waves-effect btn-large blue bahten" id="edit' +
+        i +
+        '" type="submit" name="action">Edit' +
+        "</button>" +
+        '<button class="btn waves-effect btn-large pink lighten-1 bahten" id="delete' +
+        i +
+        '" type="submit" name="action">Delete' +
+        "</button>" +
+        "&nbsp" +
+        "</div>" +
+        "</div>" +
         "</div>" +
         "</div>" +
         "</div>"
