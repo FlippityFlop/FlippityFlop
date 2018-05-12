@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  window.globalid = "";
   console.log("document.ready");
 
   // Variable to hold our decks
@@ -31,23 +32,25 @@ $(document).ready(function() {
           '<img src="images/deck_bg.png" id="deck_bg">' +
           '<div class="centered card_title card_color">' +
           decks[i].deck_name +
+          "<div>" +
+          '<button class="btn waves-effect btn-large pink lighten-1 bahten openButton" id="' +
+          decks[i].id +
+          '" type="submit" name="action">Open Deck' +
+          "</button>" +
           "</div>" +
           "</div>" +
           "</div>"
       );
       $(".newDeckHere").append(newDeckRow);
     }
-
-    $(".deleteButton").on("click", function(event) {
-      var id = $(this).attr("id");
-      console.log("id of button clicked? " + id);
-      $.ajax({
-        method: "DELETE",
-        url: "/api/decks/" + id
-      }).then(function(cb) {
-        initializedecks(cb, deckId);
-      });
-      window.location.href = window.location.href;
-    });
   }
+  $(".newDeckHere").on("click", ".openButton", function(event) {
+    console.log("click worked");
+    var id = $(this).attr("id");
+    console.log("BUTTON ID " + id);
+    console.log(window.globalid);
+    var newURL =
+      window.location.protocol + "//" + window.location.host + "/deck_page";
+    window.location = newURL;
+  });
 });

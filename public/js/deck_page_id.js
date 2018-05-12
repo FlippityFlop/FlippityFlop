@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("id = " + id);
   console.log("document.ready");
   // blogContainer holds all of our posts
   var deckContainer = $(".deck-container");
@@ -72,6 +73,10 @@ function initializeCards(cards, deckId) {
         cards[i].answer +
         "</p>" +
         '<div class="center">' +
+        '<button class="btn waves-effect btn-large blue bahten" id="' +
+        cards[i].id +
+        '" type="submit" name="action">Edit' +
+        "</button>" +
         '<button class="btn waves-effect btn-large pink lighten-1 bahten deleteButton" id="' +
         cards[i].id +
         '" type="submit" name="action">Delete' +
