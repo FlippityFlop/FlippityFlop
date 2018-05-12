@@ -61,26 +61,27 @@
 <!-- DECKS -->
 
 <div class="row" id="question_body">
+  <div class="newDeckHere"></div>
 
-  {{#each decks}}
-    <div class="col m12 l6">
-      <div class="image_container">
-        <img src="images/deck_bg.png" id="deck_bg">
-        <div class="centered card_title card_color">{{this.deck_name}}</div>
-        </a>
-      </div>
+  {{!-- {{#each decks}} --}} {{!--
+  <div class="col m12 l6">
+    <div class="image_container">
+      <img src="images/deck_bg.png" id="deck_bg">
+      <div class="centered card_title card_color">Deck 1</div>
+      </a>
     </div>
-  {{/each}}
+  </div> --}} {{!-- {{/each}} --}}
 
-<footer class="site-footer">
-  Made with hands by Andy, Bob, Clay, Marina and Mo
-</footer>
+  <footer class="site-footer">
+    Made with hands by Andy, Bob, Clay, Marina and Mo
+  </footer>
 
 
-<body>
-  <script src="js/scripts.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js"></script>
+  <body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js"></script>
 
-</body>
+  </body>
 
 </html>
