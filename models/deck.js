@@ -14,6 +14,15 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  Deck.sync().then(() => {
+    Deck.create({
+      deck_name: 'Dolphin Questions'
+    });
+    Deck.create({
+      deck_name: 'Koala Questions'
+    });
+  });
+
   Deck.associate = function(models) {
     Deck.hasMany(models.Card, {
       onDelete: "cascade"
