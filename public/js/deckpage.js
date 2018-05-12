@@ -1,5 +1,6 @@
 $(document).ready(function() {
   console.log("document.ready");
+
   // blogContainer holds all of our posts
   var deckContainer = $(".deck-container");
   var cardCategorySelect = $("#category");
@@ -12,21 +13,25 @@ $(document).ready(function() {
   // Looks for a query param in the url for deck_id
   var url = window.location.search;
   console.log(url);
-  var deckId = 1;
-  getCards(deckId);
-  //   if (url.indexOf("?deck_id=") !== -1) {
-  //     deckId = url.split("=")[1];
-  //     getCards(deckId);
-  //   }
-  //   // If there's no deckId we just get all posts as usual
-  //   else {
-  //     getCards();
-  //   }
+  // var deckId = 1;
+  yourDeck();
+
+  function yourDeck() {
+    console.log("you are in yourdeck function");
+    $.get("/api/yourdeck", function(data) {
+      console.log("yourdeck ", data);
+      yourdeck = data.SelectedDecks;
+      console.log("var yourdeck = " + yourdeck);
+      var id = data[0].find_deck;
+      console.log("your find_deck id " + id);
+      getCards(id);
+    });
+  }
 
   // This function grabs decks from the database and updates the view
   function getCards(deck) {
     console.log("deck" + deck);
-    deckId = deck || "";
+    var deckId = deck || "";
     console.log("deckid" + deckId);
     // if (deckId) {
     //   deckId = "" + deckId;

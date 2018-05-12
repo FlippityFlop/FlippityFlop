@@ -47,6 +47,15 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/yourdeck", function(req, res) {
+    console.log(req.body.deck_name);
+    db.SelectedDeck.create({
+      find_deck: req.body.find_deck
+    }).then(function(dbDeck) {
+      res.json(dbDeck);
+    });
+  });
+
   //   app.delete("/api/authors/:id", function(req, res) {
   //     db.Author.destroy({
   //       where: {

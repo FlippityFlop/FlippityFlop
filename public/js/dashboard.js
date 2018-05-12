@@ -48,9 +48,16 @@ $(document).ready(function() {
     console.log("click worked");
     var id = $(this).attr("id");
     console.log("BUTTON ID " + id);
-    console.log(window.globalid);
-    var newURL =
-      window.location.protocol + "//" + window.location.host + "/deck_page";
-    window.location = newURL;
+    var newDeck = { find_deck: id };
+    $.ajax({
+      url: "/api/yourdeck",
+      method: "POST",
+      data: newDeck
+    }).then(function(yourdeck) {
+      console.log(window.globalid);
+      var newURL =
+        window.location.protocol + "//" + window.location.host + "/deck_page";
+      window.location = newURL;
+    });
   });
 });
