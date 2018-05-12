@@ -28,6 +28,15 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/yourdeck/", function(req, res) {
+    db.SelectedDeck.findAll({
+      limit: 1,
+      order: [["createdAt", "DESC"]]
+    }).then(function(dbYourDeck) {
+      res.json(dbYourDeck);
+    });
+  });
+
   app.delete("/api/cards/:id", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.Card.destroy({
