@@ -3,14 +3,14 @@ $(document).ready(function() {
 
   $("#add_new_card").on("click", function(event) {
     var newCardRow = $(
-      '<div class="input-field col s6">' +
+      '<div class="input-field col m6">' +
         '<input placeholder="Next Question" id= "question_field_' +
         cardCount +
         '" name = "answer_field_' +
         cardCount +
         '" class="validate" type="text">' +
         "</div>" +
-        '<div class= "input-field col s6">' +
+        '<div class= "input-field col m6">' +
         '<input placeholder="Next Answer" name = "answer_field_' +
         cardCount +
         '" id= "answer_field_' +
