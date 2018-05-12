@@ -10,6 +10,8 @@ var passport = require("passport");
 var session = require("express-session");
 var exphbs = require("express-handlebars");
 var env = require('dotenv').load();
+var flash = require('connect-flash');
+
 
 // Sets up the Express App
 // =============================================================
@@ -28,6 +30,13 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+app.use(flash());
+app.use(function(req, res, next) {
+  res.locals.signinMessage = req.flash('signinMessage');
+  res.locals.signupMessage = req.flash('signupMessage');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 //For Handlebars
 app.set('views', './views')
