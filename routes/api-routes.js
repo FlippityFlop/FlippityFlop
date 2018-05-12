@@ -28,6 +28,15 @@ module.exports = function(app) {
     });
   });
 
+  app.delete("/api/cards/:id", function(req, res) {
+    // We just have to specify which todo we want to destroy with "where"
+    db.Card.destroy({
+      where: { id: req.params.id }
+    }).then(function(dbTodo) {
+      res.json(dbTodo);
+    });
+  });
+
   // // Get route for returning posts of a specific category
   // app.get("/api/posts/category/:category", function(req, res) {
   //   // Add sequelize code to find all posts where the category is equal to req.params.category,

@@ -71,12 +71,12 @@ function initializeCards(cards, deckId) {
         cards[i].answer +
         "</p>" +
         '<div class="center">' +
-        '<button class="btn waves-effect btn-large blue bahten" id="edit' +
-        i +
+        '<button class="btn waves-effect btn-large blue bahten" id="' +
+        cards[i].id +
         '" type="submit" name="action">Edit' +
         "</button>" +
-        '<button class="btn waves-effect btn-large pink lighten-1 bahten" id="delete' +
-        i +
+        '<button class="btn waves-effect btn-large pink lighten-1 bahten deleteButton" id="' +
+        cards[i].id +
         '" type="submit" name="action">Delete' +
         "</button>" +
         "&nbsp" +
@@ -88,4 +88,16 @@ function initializeCards(cards, deckId) {
     );
     $(".newCardHere").append(newCardRow);
   }
+
+  $(".deleteButton").on("click", function(event) {
+    var id = $(this).attr("id");
+    console.log("id of button clicked? " + id);
+    $.ajax({
+      method: "DELETE",
+      url: "/api/cards/" + id
+    }).then(function(cb) {
+      initializeCards(cb, deckId);
+    });
+    window.location.href = window.location.href;
+  });
 }
