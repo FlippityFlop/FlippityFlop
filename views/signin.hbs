@@ -37,6 +37,7 @@
           <input placeholder="*********" id="password_field" name="password" type="password" class="validate">
           <label for="password_field">Password</label>
         </div>
+        {{#if signinMessage}}<div style="color:#EC407A">{{signinMessage}}</div>{{/if}}
         <button class="btn waves-effect pink lighten-1 btn-large" id="create_user_btn" type="submit" name="action">Login</button>
         <h5>Don't have an account?
           <a class="space" href="signup">REGISTER</a>
