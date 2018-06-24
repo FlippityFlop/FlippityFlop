@@ -5,4 +5,6 @@ Check out the deployed site here! https://flippity-flop.herokuapp.com/
 
 The application is made with HTML/CSS/Javascript, Express.js, Materialize framework, and an SQL database. 
 
+Loggin In: 
+![alt text](./public/images/FlopLogginIn.gif)
 
